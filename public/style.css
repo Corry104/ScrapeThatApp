@@ -1,4 +1,4 @@
-html { 
+  html { 
   background-image: url("http://dailypost.ng/wp-content/uploads/2015/11/premier-league.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -17,6 +17,11 @@ html {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  color: blue;
+}
+
+.articlesButton :hover {
+  background-color: lightskyblue;
 }
 
 .container {

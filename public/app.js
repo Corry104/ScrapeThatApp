@@ -100,3 +100,23 @@ $(document).on("click", "#saveArticle", function() {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
+
+$(document).on("click", "#clearArticle", () => {
+
+  $.ajax({
+    method: "DELETE",
+    url: "/article/" + thisId,
+    data: {
+      title: $("#artiTtle").val(),
+      link: $("#artLink").val(),
+    },
+    contentType:'application/json',  
+    dataType: 'text',
+  })
+
+    .then(function(data) {
+      $("#clearArticle").empty();
+
+    });
+  
+});
