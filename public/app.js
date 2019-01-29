@@ -88,6 +88,20 @@ $(document).on("click", "#saveArticle", function() {
   })
 });
 
+//Scrape an article
+$(document).on("click", ".scrape-new", function() {
+  var thisId = $(this).attr("data-id");
+  var data = {}
+  data.title =  $("#artiTitle" + thisId).text();
+  data.link = $("#artLink" + thisId).text();
+  $.ajax({
+    method: "POST",
+    dataType: "json",
+    url: "/scrape/",
+    data: data
+  })
+});
+
 $(document).on("click", "#clearArticle", () => {
 
   $.ajax({
