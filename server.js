@@ -93,7 +93,7 @@ app.get("/scrape", function (req, res) {
 });
 
 // Route for getting all Articles from the news
-app.get("/articles", function (req, res) {
+app.get("/articles/", function (req, res) {
   // Grab every document in the Articles collection
   news.Article.find({})
     .then(function (newsArticle) {
